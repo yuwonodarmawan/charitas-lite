@@ -69,20 +69,6 @@ The theme has 2 custom templates:
 1. Home page template - To display custom widgets on home page
 2. Contact Page Template - To display the contact form.
 
-## Make the theme to look like the demo:
-
-- The Dummy content is located in "Dummy Content" Folder.
-
-- In order to import the dummy content (pages, posts etc) go to Tools > Import > WordPress and upload the file with the extension *.xml. 
-
-In order to import all widgets like on our demo we recommend to use “Widget Importer & Exporter” plugin http://wordpress.org/plugins/widget-importer-exporter/
-
-Go to widgets and remove all current widgets.
-
-After you install the Plugin go to Tools > Widget import & export and import the file: *.wie
-
-- In order to import Theme Options Copy the alphanumeric code from Dummy Content / theme-options.txt and go to Option Tree > Settings > Import > Paste the code to "Theme Options" field and press Import theme options button.
-
 ## Header Image - The image source is https://unsplash.com and it's under GPL licence.
 UNSPLASH LICENSE
 
