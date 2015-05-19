@@ -11,7 +11,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	
 	<!--  Basic Page Needs -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<!-- Mobile Specific Meta -->
