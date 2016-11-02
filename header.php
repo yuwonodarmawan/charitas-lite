@@ -47,7 +47,7 @@
 						<?php } ?>
 
 						<?php if ( ot_get_option('charitas_contact_email') != "") { ?>
-							<li class="contact"><a href="mailto:<?php echo esc_url(ot_get_option('charitas_contact_email')); ?>"><i class="icon-envelope"></i></a></li>
+							<li class="contact"><a href="mailto:<?php echo sanitize_email(ot_get_option('charitas_contact_email')); ?>"><i class="icon-envelope"></i></a></li>
 						<?php } ?>
 						
 						<?php if ( ot_get_option('charitas_group_icons') != "off") { ?>
