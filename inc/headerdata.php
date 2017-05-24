@@ -80,14 +80,6 @@ if ( ! function_exists( 'wpl_scripts_include' ) ) {
 		wp_enqueue_script('jquery');
 
 
-		/*-----------------------------------------------------------
-			This part loads a JavaScript file that enables old versions of Internet Explorer to recognize the new HTML5 element
-		-----------------------------------------------------------*/
-		
-		global $is_IE;
-		if ($is_IE) { wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' ); } 
-
-
 		if ( is_singular() && comments_open() ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
