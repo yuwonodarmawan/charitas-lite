@@ -15,51 +15,10 @@
 if ( ! isset( $content_width ) )
 	$content_width = 790; /* pixels */
 
-/*-----------------------------------------------------------------------------------*/
-/*	Include Option Tree
-/*-----------------------------------------------------------------------------------*/
-
-	/*-----------------------------------------------------------
-		Optional: set 'ot_show_pages' filter to false.
-		This will hide the settings & documentation pages.
-	-----------------------------------------------------------*/
-
-	add_filter( 'ot_show_pages', '__return_false' );
-
-
-	/*-----------------------------------------------------------
-		Optional: set 'ot_show_new_layout' filter to false.
-		This will hide the "New Layout" section on the Theme Options page.
-	-----------------------------------------------------------*/
-
-	add_filter( 'ot_show_new_layout', '__return_false' );
-
 
 	/*-----------------------------------------------------------
 		Required: set 'ot_theme_mode' filter to true.
 	-----------------------------------------------------------*/
-
-	add_filter( 'ot_theme_mode', '__return_true' );
-
-
-	/*-----------------------------------------------------------
-		Required: include OptionTree.
-	-----------------------------------------------------------*/
-
-	include_once( get_template_directory() . '/option-tree/ot-loader.php' );
-	include_once( get_template_directory() . '/inc/theme-options.php' );
-
-
-	/*-----------------------------------------------------------
-		Filters the Theme Options ID
-	-----------------------------------------------------------*/
-
-	function wplook_filter_demo_options_id() {
-	  return 'demo_option_tree';
-	}
-	add_filter( 'ot_options_id', 'wplook_filter_demo_options_id' );
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	Theme setup
 /*-----------------------------------------------------------------------------------*/
@@ -161,36 +120,6 @@ if ( ! function_exists( 'charitas_initiate_files' ) ) {
 		require_once (get_template_directory() . '/inc/' . 'comment.php');						// Comments
 	}
 	add_action( 'after_setup_theme', 'charitas_initiate_files' );
-
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*	Redirect After the theme is activated
-/*-----------------------------------------------------------------------------------*/
-
-if ( ! function_exists( 'charitas_redirect_after_theme_activation' ) ) {
-
-	function charitas_redirect_after_theme_activation (){
-		$redirectTo = admin_url().'themes.php?page=ot-theme-options';
-		wp_redirect($redirectTo);
-	}
-
-	add_action("after_switch_theme", "charitas_redirect_after_theme_activation");
-
-}
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	Flush Rewrite after the theme is activated
-/*-----------------------------------------------------------------------------------*/
-
-if ( ! function_exists( 'charitas_rewrite_flush' ) ) {
-
-	function charitas_rewrite_flush() {
-		flush_rewrite_rules();
-	}
-
-	add_action( 'after_switch_theme', 'charitas_rewrite_flush' );
 
 }
 

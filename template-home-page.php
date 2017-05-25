@@ -10,7 +10,6 @@
 
 <?php get_header(); ?>
 
-<?php $wpl_sliders = ot_get_option( 'wpl_sliders', array() ); ?>
 	<div id="teaser">
 		<?php  get_template_part( 'inc', 'slider' ); ?>
 	</div>
