@@ -58,9 +58,7 @@
 					<!-- CopyRight -->
 					<div class="grid_8">
 						<p class="copy">
-							<?php if ( ot_get_option('charitas_copyright') ){
-								echo esc_html(ot_get_option('charitas_copyright'));
-							} ?>
+							<?php if ( get_theme_mod('wplook_copy') ){ echo esc_html(get_theme_mod('wplook_copy') ); } ?>
 						</p>
 					</div>
 					

@@ -32,56 +32,37 @@
 								wp_nav_menu( array('depth' => '3', 'theme_location' => 'language' ));
 						} ?> 
 
-
 					<ul class="tb-list">
-						<?php if ( ot_get_option('charitas_phone_number') != "") { ?>
-							<li class="phone"><a href="tel:<?php echo esc_html(ot_get_option('charitas_phone_number') ) ?>" ><?php _e('Tel.:', 'charitas'); ?><?php echo esc_html(ot_get_option('charitas_phone_number') ) ?></a></li>
+
+						<?php if ( get_theme_mod('wplook_phonenr') ){  ?>
+							<li class="phone"><a href="tel:<?php echo esc_html(get_theme_mod('wplook_phonenr') ); ?>" ><?php _e('Tel.:', 'charitas-lite'); ?><?php echo esc_html(get_theme_mod('wplook_phonenr') ); ?></a></li>
 						<?php } ?>
 
-						<?php if ( ot_get_option('charitas_rss_link') != "") { ?>
-							<li class="rss"><a href="<?php echo esc_url(ot_get_option('charitas_rss_link') )?>"><i class="icon-feed2"></i></a></li>
-						<?php } ?>
-						
-						<?php if ( ot_get_option('charitas_contact_page_link') != "") { ?>
-							<li class="contact"><a href="<?php echo esc_url(get_page_link(ot_get_option('charitas_contact_page_link'))); ?>"><i class="icon-envelope"></i></a></li>
-						<?php } ?>
-
-						<?php if ( ot_get_option('charitas_contact_email') != "") { ?>
-							<li class="contact"><a href="<?php echo esc_url('mailto:' . ot_get_option('charitas_contact_email')); ?>"><i class="icon-envelope"></i></a></li>
+						<?php if ( get_theme_mod('wplook_rssurl') ){  ?>
+							<li class="rss"><a href="<?php echo esc_html(get_theme_mod('wplook_rssurl') ); ?>"><i class="icon-feed2"></i></a></li>
 						<?php } ?>
 						
-						<?php if ( ot_get_option('charitas_group_icons') != "off") { ?>
-										
-							<?php $charitas_toolbar_share = ot_get_option( 'charitas_toolbar_share', array() ); ?>
-							<?php if( $charitas_toolbar_share ) : ?>
-								<li class="share"><a href="#"><i class="icon-share"></i></a>
-									<ul class="share-items radius-bottom">
-										<?php foreach( $charitas_toolbar_share as $item ) : ?>
-											<li class="share-item-<?php echo esc_html($item['charitas_share_item_icon']); ?> radius"><a target="_blank" title="<?php echo esc_attr($item['charitas_share_item_name']); ?>" href="<?php echo esc_url($item['charitas_share_item_url']); ?>"><i class="<?php echo esc_html($item['charitas_share_item_icon']); ?>"></i></a></li>
-										<?php endforeach; ?>
-									</ul>
-								</li>
-							<?php endif; ?>
-
-						<?php } else { ?>
-
-							<?php $charitas_toolbar_share = ot_get_option( 'charitas_toolbar_share', array() ); ?>
-							<?php if( $charitas_toolbar_share ) : ?>
-								<?php foreach( $charitas_toolbar_share as $item ) : ?>
-									<li class="share-item-<?php echo esc_html($item['charitas_share_item_icon']); ?> mt"><a target="_blank" title="<?php echo esc_attr($item['charitas_share_item_name']); ?>" href="<?php echo esc_url($item['charitas_share_item_url']); ?>"><i class="<?php echo esc_attr($item['charitas_share_item_icon']); ?>"></i></a></li>
-								<?php endforeach; ?>
-							<?php endif; ?>
-
+						<?php if ( get_theme_mod('wplook_contacturl') ){  ?>
+							<li class="contact"><a href="<?php echo esc_url( get_page_link(get_theme_mod('wplook_contacturl')) ); ?>"><i class="icon-envelope"></i></a></li>
+						<?php } ?>
+						
+						<?php if ( get_theme_mod('wplook_facebookurl') ){  ?>
+							<li class="share-item-icon-facebook mt"><a target="_blank" title="Facebook" href="<?php echo esc_url(get_theme_mod('wplook_facebookurl') ); ?>"><i class="icon-facebook"></i></a></li>
 						<?php } ?>
 
-						<?php if ( ot_get_option('charitas_search_form') == "on") { ?>
+						<?php if ( get_theme_mod('wplook_twitterurl') ){  ?>
+							<li class="share-item-icon-twitter mt"><a target="_blank" title="Twitter" href="<?php echo esc_url(get_theme_mod('wplook_twitterurl') ); ?>"><i class="icon-twitter"></i></a></li>
+						<?php } ?>
+
+
+						<?php if ( get_theme_mod('wplook_Search_button') == 'yes' ){  ?>
 							<li class="search"><a href="#"><i class="icon-search"></i></a>
 								<ul class="search-items radius-bottom">
 									<li>
 										<div class="search-form">
 											<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 												<div>
-													<input type="text" value="<?php _e('Search for...', 'charitas'); ?>" name="s" id="s" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+													<input type="text" value="<?php _e('Search for...', 'charitas-lite'); ?>" name="s" id="s" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
 													<input type="submit" id="searchsubmit" value="Search" />
 												</div>
 											</form>
@@ -91,7 +72,7 @@
 							</li>
 						<?php } ?>
 
-						<?php if ( ot_get_option('charitas_donete_link') != "") { ?>
+						<?php if ( get_theme_mod('wplook_donateurl') ){  ?>
 							<li class="donate"><a href="<?php echo esc_url(get_theme_mod('wplook_donateurl') ); ?>"><?php _e('Donate', 'charitas-lite'); ?> <i class="icon-heart"></i></a></li>
 						<?php } ?>
 
@@ -109,12 +90,11 @@
 					<hgroup class="fleft grid_5">
 							<h1 id="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo('description'); ?>" rel="home">
-								<?php
-								if ( ot_get_option('charitas_logo') != ''){?>
-										<img src="<?php echo esc_html(ot_get_option('charitas_logo')); ?>">
-									<?php } else {
-										bloginfo('name');
-									}?>
+								<?php if ( get_theme_mod('wplook_logo') ){ ?>
+									<img src="<?php echo get_theme_mod('wplook_logo') ?>">
+								<?php } else {
+									bloginfo('name');
+								}?>
 								</a>
 							</h1>
 								<h2 id="site-description"><?php bloginfo('description'); ?></h2>

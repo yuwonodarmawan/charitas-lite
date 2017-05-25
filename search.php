@@ -14,7 +14,7 @@
 			<aside class="grid_10">
 				<h1 class="page-title"><?php _e('Search Results for:', 'charitas-lite'); ?> '<?php echo get_search_query(); ?>'</h1>
 			</aside>
-			<?php if ( ot_get_option('charitas_breadcrumbs') != "off") { ?>
+			<?php if ( get_theme_mod('wplook_breadcrumb') != 'no' ){ ?>
 				<div class="grid_6">
 					<div id="rootline">
 						<?php charitas_breadcrumbs(); ?>	

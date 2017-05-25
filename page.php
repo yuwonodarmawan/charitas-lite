@@ -19,7 +19,7 @@
 				<h1 class="page-title"><?php the_title() ?></h1>
 			</aside>
 			
-			<?php if ( ot_get_option('charitas_breadcrumbs') != "off") { ?>
+			<?php if ( get_theme_mod('wplook_breadcrumb') != 'no' ){ ?>
 				<div class="grid_6">
 					<div id="rootline">
 						<?php charitas_breadcrumbs(); ?>	

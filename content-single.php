@@ -34,14 +34,14 @@
 				<div class="entry-meta-press">
 
 					<!-- Date -->
-					<?php if ( ot_get_option('charitas_date_single_post') != "off" ) { ?>
+					<?php if ( get_theme_mod('wplook_date_single_post') !='off' ){  ?>
 						<time class="entry-date fleft" datetime="<?php echo esc_html(get_the_date( 'c' ) ) ?>">
 							<i class="icon-calendar"></i> <?php esc_html(charitas_get_date_time()); ?>
 						</time>
 					<?php } ?>
 					
 					<!-- Category -->
-					<?php if ( ot_get_option('charitas_category_single_post') != "off" ) { ?>
+					<?php if ( get_theme_mod('wplook_category_single_post') !='off' ){  ?>
 						<div class="category-i fleft">
 							<i class="icon-folder"></i> <?php the_category(', ') ?>
 						</div>
@@ -55,7 +55,7 @@
 					<?php } ?>
 
 					<!-- Author -->
-					<?php if ( ot_get_option('charitas_author_single_post') != "off" ) { ?>
+					<?php if ( get_theme_mod('wplook_author_single_post') !='off' ){  ?>
 						<div class="author-i">
 							<i class="icon-user"></i> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a>
 						</div>

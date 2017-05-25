@@ -8,43 +8,104 @@
  */
 ?>
 <?php 
-	$wpl_sliders = ot_get_option( 'wpl_sliders', array() );
 	$header_image = get_header_image();
 ?>
 
-<?php if ( ! empty( $wpl_sliders ) && ot_get_option('charitas_slider_revolution') == '' ){ ?>
+<?php if ( get_theme_mod('wplook_activate_homepage_slider') == 'yes' ) { ?>
 	<div class="flexslider loading">
 		<ul class="slides">
-			<?php $i = 0; ?>
-			<?php foreach( $wpl_sliders as $item ) : ?>
-			<?php if(++$i > 4) break; ?>
-				<li data-thumb="<?php echo $item['charitas_slider_item_thumbnail']; ?>">
-					<a href="<?php echo esc_url($item['charitas_slider_item_url']); ?>"><img src="<?php echo esc_url($item['charitas_slider_item_image']); ?>" alt="<?php echo esc_attr($item['charitas_slider_item_title']); ?>"></a>
+				
+				<li data-thumb="<?php echo get_theme_mod('wplook_slide1_thumb') ?>">
+					<a href="<?php echo esc_html(get_theme_mod('wplook_slide1_url') ); ?>"><img src="<?php echo get_theme_mod('wplook_slide1_image') ?>" alt="<?php echo get_theme_mod('wplook_slide1_title') ?>"></a>
 					<div class="flex-caption ">
 						<div class="flex-content container_16">
 							<div class="grid_16">
-								<?php if ( $item['charitas_slider_item_title'] != "") { ?>
-									<h1 <?php if ( $item['charitas_slider_item_title_color'] != "") { ?> style="color: <?php echo esc_html($item['charitas_slider_item_title_color']); ?>;" <?php } ?>><?php echo esc_html($item['charitas_slider_item_title']); ?></h1>
+								<?php if ( get_theme_mod('wplook_slide1_title') ) { ?>
+									<h1><?php echo esc_html(get_theme_mod('wplook_slide1_title')); ?></h1>
 								<?php } ?>
 								
-								<?php if ( $item['charitas_slider_item_description'] != "") { ?>
-									<h2 <?php if ( $item['charitas_slider_item_description_color'] != "") { ?> style="color: <?php echo esc_html($item['charitas_slider_item_description_color']); ?>;" <?php } ?>><?php echo esc_html($item['charitas_slider_item_description']); ?></h2>
+								<?php if ( get_theme_mod('wplook_slide1_description') ) { ?>
+									<h2><?php echo esc_html(get_theme_mod('wplook_slide1_description')); ?></h2>
 								<?php } ?>
 
-								<?php if ( $item['charitas_slider_item_url'] != "") { ?>
-									<div class="flex-button"><a <?php if ( $item['charitas_slider_item_button_color'] != "") { ?> style="color: <?php echo esc_html($item['charitas_slider_item_button_color']); ?>; border: 1px solid <?php echo esc_html($item['charitas_slider_item_button_color']); ?>;" <?php } ?> class="radius" href="<?php echo esc_url($item['charitas_slider_item_url']); ?>"><?php echo esc_html($item['charitas_slider_item_button_text']); ?> <i class="icon-angle-right"></i></a></div>
+								<?php if ( get_theme_mod('wplook_slide1_description') ) { ?>
+									<div class="flex-button"><a class="radius" href="<?php echo esc_url(get_page_link(get_theme_mod('wplook_contacturl'))); ?>">Learn More <i class="icon-angle-right"></i></a></div>
 								<?php } ?>
 							</div>	
 						</div>
 					</div>
 				</li>
-			<?php endforeach; ?>
+
+				<li data-thumb="<?php echo get_theme_mod('wplook_slide2_thumb') ?>">
+					<a href="<?php echo esc_html(get_theme_mod('wplook_slide2_url') ); ?>"><img src="<?php echo get_theme_mod('wplook_slide2_image') ?>" alt="<?php echo get_theme_mod('wplook_slide2_title') ?>"></a>
+					<div class="flex-caption ">
+						<div class="flex-content container_16">
+							<div class="grid_16">
+								<?php if ( get_theme_mod('wplook_slide2_title') ) { ?>
+									<h1><?php echo esc_html(get_theme_mod('wplook_slide2_title')); ?></h1>
+								<?php } ?>
+								
+								<?php if ( get_theme_mod('wplook_slide2_description') ) { ?>
+									<h2><?php echo esc_html(get_theme_mod('wplook_slide2_description')); ?></h2>
+								<?php } ?>
+
+								<?php if ( get_theme_mod('wplook_slide2_description') ) { ?>
+									<div class="flex-button"><a class="radius" href="<?php echo esc_url(get_page_link(get_theme_mod('wplook_contacturl'))); ?>">Learn More <i class="icon-angle-right"></i></a></div>
+								<?php } ?>
+							</div>	
+						</div>
+					</div>
+				</li>
+
+				<li data-thumb="<?php echo get_theme_mod('wplook_slide3_thumb') ?>">
+					<a href="<?php echo esc_html(get_theme_mod('wplook_slide3_url') ); ?>"><img src="<?php echo get_theme_mod('wplook_slide3_image') ?>" alt="<?php echo get_theme_mod('wplook_slide3_title') ?>"></a>
+					<div class="flex-caption ">
+						<div class="flex-content container_16">
+							<div class="grid_16">
+								<?php if ( get_theme_mod('wplook_slide3_title') ) { ?>
+									<h1><?php echo esc_html(get_theme_mod('wplook_slide3_title')); ?></h1>
+								<?php } ?>
+								
+								<?php if ( get_theme_mod('wplook_slide3_description') ) { ?>
+									<h2><?php echo esc_html(get_theme_mod('wplook_slide3_description')); ?></h2>
+								<?php } ?>
+
+								<?php if ( get_theme_mod('wplook_slide3_description') ) { ?>
+									<div class="flex-button"><a class="radius" href="<?php echo esc_url(get_page_link(get_theme_mod('wplook_contacturl'))); ?>">Learn More <i class="icon-angle-right"></i></a></div>
+								<?php } ?>
+							</div>	
+						</div>
+					</div>
+				</li>
+
+				<li data-thumb="<?php echo get_theme_mod('wplook_slide4_thumb') ?>">
+					<a href="<?php echo esc_html(get_theme_mod('wplook_slide4_url') ); ?>"><img src="<?php echo get_theme_mod('wplook_slide4_image') ?>" alt="<?php echo get_theme_mod('wplook_slide4_title') ?>"></a>
+					<div class="flex-caption ">
+						<div class="flex-content container_16">
+							<div class="grid_16">
+								<?php if ( get_theme_mod('wplook_slide4_title') ) { ?>
+									<h1><?php echo esc_html(get_theme_mod('wplook_slide4_title')); ?></h1>
+								<?php } ?>
+								
+								<?php if ( get_theme_mod('wplook_slide4_description') ) { ?>
+									<h2><?php echo esc_html(get_theme_mod('wplook_slide4_description')); ?></h2>
+								<?php } ?>
+
+								<?php if ( get_theme_mod('wplook_slide4_description') ) { ?>
+									<div class="flex-button"><a class="radius" href="<?php echo esc_url(get_page_link(get_theme_mod('wplook_contacturl'))); ?>">Learn More <i class="icon-angle-right"></i></a></div>
+								<?php } ?>
+							</div>	
+						</div>
+					</div>
+				</li>
+
+
 		</ul>
 	</div>
 
-<?php } elseif ( ot_get_option( 'charitas_slider_revolution') != '' ){ ?>
+<?php } elseif ( get_theme_mod('wplook_rev_slider') != '' ){ ?>
 	<div class="revolution-slider">
-		<?php putRevSlider( esc_html(ot_get_option( 'charitas_slider_revolution') ) ); ?>
+		<?php putRevSlider( esc_html(get_theme_mod('wplook_rev_slider') ) ); ?>
 	</div>		
 <?php } else {
 	if (! empty( $header_image ) ) { ?>
