@@ -24,8 +24,8 @@ function wplook_comment( $comment, $args, $depth ) {
 		<div class="entry-header-comments">
 			<div class="reply fright"><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div>
 			
-			<?php printf( __( '%s <span class="says">says on:</span>', 'charitas' ), sprintf( '<h3 class="fn">%s</h3>', get_comment_author_link() ) ); ?> </br />
-			<div class="comment-date fleft"><i class="icon-clock"></i> <?php printf( __( '%1$s at %2$s', 'charitas' ), get_comment_date(), get_comment_time() ); ?></div>
+			<?php printf( __( '%s <span class="says">says on:</span>', 'charitas-lite' ), sprintf( '<h3 class="fn">%s</h3>', get_comment_author_link() ) ); ?> </br />
+			<div class="comment-date fleft"><i class="icon-clock"></i> <?php printf( __( '%1$s at %2$s', 'charitas-lite' ), get_comment_date(), get_comment_time() ); ?></div>
 			<div class="clear"></div>
 		</div>
 <div class="clear"></div>
@@ -33,7 +33,7 @@ function wplook_comment( $comment, $args, $depth ) {
 			<div class="entry-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 				<div class="comment-awaiting-moderation">
-					<?php _e( 'Your comment is awaiting moderation.', 'charitas' ); ?>
+					<?php _e( 'Your comment is awaiting moderation.', 'charitas-lite' ); ?>
 				</div>
 				<br />
 				<?php endif; ?>
@@ -59,13 +59,13 @@ function wplook_comment( $comment, $args, $depth ) {
 		<div class="entry-header-comments">
 		<span class="tooltip"></span>
 	
-		 <span class="fn"><a><?php _e( 'Pingback/Trackback', 'charitas' ); ?></a></span>
-		<span class="comment-date"><?php printf( __( '%1$s at %2$s', 'charitas' ), get_comment_date(), get_comment_time() ); ?></span>
+		 <span class="fn"><a><?php _e( 'Pingback/Trackback', 'charitas-lite' ); ?></a></span>
+		<span class="comment-date"><?php printf( __( '%1$s at %2$s', 'charitas-lite' ), get_comment_date(), get_comment_time() ); ?></span>
 		</div>
 		<div class="entry-content">
 		<?php if ( $comment->comment_approved == '0' ) : ?>
 			<div class="comment-awaiting-moderation">
-				<?php _e( 'Your comment is awaiting moderation.', 'charitas' ); ?>
+				<?php _e( 'Your comment is awaiting moderation.', 'charitas-lite' ); ?>
 			</div>
 			<br />
 			<?php endif; ?>
@@ -91,26 +91,26 @@ function wplook_comment_form( $args = array(), $post_id = null ) {
 
 	$fields =  array(
 
-		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'charitas' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'charitas-lite' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
 		'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email', 'charitas' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email', 'charitas-lite' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
 		'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website', 'charitas' ) . '</label>' .
+		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website', 'charitas-lite' ) . '</label>' .
 		'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
 	);
-	$required_text = sprintf( ' ' . __('Required fields are marked %s', 'charitas' ), '<span class="required"><a>*</a></span>' );
+	$required_text = sprintf( ' ' . __('Required fields are marked %s', 'charitas-lite' ), '<span class="required"><a>*</a></span>' );
 	$defaults = array(
 		'fields'		=> apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field'		=> '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'charitas' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
-		'must_log_in'		=> '<p class="must-log-in">' .  sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'charitas' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
-		'logged_in_as'		=> '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'charitas' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
-		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.', 'charitas' ) . ( $req ? $required_text : '' ) . '</p>',
+		'comment_field'		=> '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'charitas-lite' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'must_log_in'		=> '<p class="must-log-in">' .  sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'charitas-lite' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'logged_in_as'		=> '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'charitas-lite' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.', 'charitas-lite' ) . ( $req ? $required_text : '' ) . '</p>',
 		'id_form'						=> 'commentform',
 		'id_submit'					=> 'submit',
-		'title_reply'				=> __( 'Leave a Comment', 'charitas' ),
-		'title_reply_to'		=> __( 'Leave a Reply to %s', 'charitas' ),
-		'cancel_reply_link'	=> __( 'or Cancel reply', 'charitas' ),
-		'label_submit'			=> __( 'Send Comment', 'charitas' ),
+		'title_reply'				=> __( 'Leave a Comment', 'charitas-lite' ),
+		'title_reply_to'		=> __( 'Leave a Reply to %s', 'charitas-lite' ),
+		'cancel_reply_link'	=> __( 'or Cancel reply', 'charitas-lite' ),
+		'label_submit'			=> __( 'Send Comment', 'charitas-lite' ),
 	);
 
 	$args = wp_parse_args( $args, apply_filters( 'comment_form_defaults', $defaults ) );	?>

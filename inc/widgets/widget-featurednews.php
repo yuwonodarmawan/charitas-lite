@@ -20,7 +20,7 @@ class wplook_featured_news extends WP_Widget {
 		parent::__construct(
 	 		'wplook_featured_news',
 			'WPlook Featured News',
-			array( 'description' => __( 'A widget to display Featured News or latest posts on front page', 'charitas' ), )
+			array( 'description' => __( 'A widget to display Featured News or latest posts on front page', 'charitas-lite' ), )
 		);
 	}
 
@@ -34,21 +34,21 @@ class wplook_featured_news extends WP_Widget {
 			$title = esc_attr( $instance[ 'title' ] );
 		}
 		else {
-			$title = __( '', 'charitas' );
+			$title = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$categories = esc_attr( $instance[ 'categories' ] );
 		}
 		else {
-			$categories = __( 'All', 'charitas' );
+			$categories = __( 'All', 'charitas-lite' );
 		} 
 		
 		if ( $instance ) {
 			$display_type = esc_attr( $instance[ 'display_type' ] );
 		}
 		else {
-			$display_type = __( 'Latest News', 'charitas' );
+			$display_type = __( 'Latest News', 'charitas-lite' );
 		}
 
 
@@ -56,24 +56,24 @@ class wplook_featured_news extends WP_Widget {
 			$nr_posts = esc_attr( $instance[ 'nr_posts' ] );
 		}
 		else {
-			$nr_posts = __( '5', 'charitas' );
+			$nr_posts = __( '5', 'charitas-lite' );
 		}  ?>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas'); ?> </label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas-lite'); ?> </label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id('categories'); ?>">
-				<?php _e('Category:', 'charitas'); ?>
+				<?php _e('Category:', 'charitas-lite'); ?>
 				<br />
 			</label>
 			
 			<?php wp_dropdown_categories(
 				array( 
 					'name'	=> $this->get_field_name("categories"),
-					'show_option_all'    => __('All', 'charitas'),
+					'show_option_all'    => __('All', 'charitas-lite'),
 					'show_count'	=> 1,
 					'selected' => $categories,
 					'taxonomy'  => 'category' 
@@ -82,18 +82,18 @@ class wplook_featured_news extends WP_Widget {
 			
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('display_type'); ?>"><?php _e('Display latest post instead of sticky posts:', 'charitas'); ?> <br /> </label>
+			<label for="<?php echo $this->get_field_id('display_type'); ?>"><?php _e('Display latest post instead of sticky posts:', 'charitas-lite'); ?> <br /> </label>
 			<select id="<?php echo $this->get_field_id('display_type'); ?>" name="<?php echo $this->get_field_name('display_type'); ?>">
-				<option value="no" <?php selected( 'no', $display_type ); ?>><?php _e('No', 'charitas'); ?></option>
-				<option value="yes" <?php selected( 'yes', $display_type ); ?>><?php _e('Yes', 'charitas'); ?></option>
+				<option value="no" <?php selected( 'no', $display_type ); ?>><?php _e('No', 'charitas-lite'); ?></option>
+				<option value="yes" <?php selected( 'yes', $display_type ); ?>><?php _e('Yes', 'charitas-lite'); ?></option>
 			</select>
 		</p>	
 
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('nr_posts'); ?>"> <?php _e('Number of posts:', 'charitas'); ?> </label>
+			<label for="<?php echo $this->get_field_id('nr_posts'); ?>"> <?php _e('Number of posts:', 'charitas-lite'); ?> </label>
 			<input class="widefat" id="<?php echo $this->get_field_id('nr_posts'); ?>" name="<?php echo $this->get_field_name('nr_posts'); ?>" type="text" value="<?php echo $nr_posts; ?>" />
-			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Number of posts you want to display', 'charitas'); ?></p>
+			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Number of posts you want to display', 'charitas-lite'); ?></p>
 		</p>
 		
 		<?php 
@@ -197,7 +197,7 @@ class wplook_featured_news extends WP_Widget {
 										</h3>
 										<p class="category"><?php the_category(', ') ?></p>
 										<p class="description"><?php the_excerpt(); ?></p>
-										<div class="flex-button-red"><a class="radius" href="<?php the_permalink(); ?>"><?php _e('Read More', 'charitas'); ?> <i class="icon-angle-right"></i></a></div>
+										<div class="flex-button-red"><a class="radius" href="<?php the_permalink(); ?>"><?php _e('Read More', 'charitas-lite'); ?> <i class="icon-angle-right"></i></a></div>
 									</div>
 									<div class="clear"></div>
 								</li>

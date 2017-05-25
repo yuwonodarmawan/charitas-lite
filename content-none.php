@@ -10,8 +10,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<h3 class="entry-title">
-		<?php _e("We didn't find any results for:", 'charitas'); ?> '<?php echo get_search_query(); ?>'
+		<?php _e("We didn't find any results for:", 'charitas-lite'); ?> '<?php echo get_search_query(); ?>'
 	</h3>
-	<p><?php _e('Try again with another combination!', 'charitas'); ?></p>
+	<p><?php _e('Try again with another combination!', 'charitas-lite'); ?></p>
 	<?php get_template_part( 'searchform' ); ?>
 </article>

@@ -148,41 +148,41 @@ if ( ! function_exists( 'wplook_doctitle' ) ) {
 	function wplook_doctitle() {
 
 		if ( is_search() ) { 
-		  $content = __('Search Results for:', 'charitas'); 
+		  $content = __('Search Results for:', 'charitas-lite'); 
 		  $content .= ' ' . esc_html(stripslashes(get_search_query()));
 		}
 
 		elseif ( is_category() ) {
-		  $content = __('', 'charitas');
+		  $content = __('', 'charitas-lite');
 		  $content .= ' ' . single_cat_title("", false);
 		}
 
 		elseif ( is_day() ) {
-			$content = __( '', 'charitas');
+			$content = __( '', 'charitas-lite');
 			$content .= ' ' . esc_html(stripslashes( get_the_date()));
 		}
 		
 		elseif ( is_month() ) {
-			$content = __( '', 'charitas');
+			$content = __( '', 'charitas-lite');
 			$content .= ' ' . esc_html(stripslashes( get_the_date( 'F Y' )));
 		}
 		elseif ( is_year()  ) {
-			$content = __( '', 'charitas');
+			$content = __( '', 'charitas-lite');
 			$content .= ' ' . esc_html(stripslashes( get_the_date( 'Y' ) ));
 		}		
 		
 		elseif ( is_tag() ) { 
-		  $content = __('', 'charitas');
+		  $content = __('', 'charitas-lite');
 		  $content .= ' ' . single_tag_title( '', false );
 		}
 
 		elseif ( is_author() ) { 
-		  $content = __("", 'charitas');
+		  $content = __("", 'charitas-lite');
 		  
 		} 
 		
 		elseif ( is_404() ) { 
-		  $content = __('Not Found', 'charitas'); 
+		  $content = __('Not Found', 'charitas-lite'); 
 		}
 		
 		else { 

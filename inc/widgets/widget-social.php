@@ -20,7 +20,7 @@ class WPlooksocial extends WP_Widget {
 		parent::__construct(
 			'WPlooksocial',
 			'WPlook Social',
-			array( 'description' => __( 'A widget for displaying Social Networking', 'charitas' ), )
+			array( 'description' => __( 'A widget for displaying Social Networking', 'charitas-lite' ), )
 		);
 	}
 	
@@ -36,90 +36,90 @@ class WPlooksocial extends WP_Widget {
 		}
 
 		else {
-			$title = __( '', 'charitas' );
+			$title = __( '', 'charitas-lite' );
 		} 
 
 		if ( $instance ) {
 			$twitter = esc_attr( $instance[ 'twitter' ] );
 		}
 		else {
-			$twitter = __( '', 'charitas' );
+			$twitter = __( '', 'charitas-lite' );
 		} 
 
 		if ( $instance ) {
 			$facebook = esc_attr( $instance[ 'facebook' ] );
 		}
 		else {
-			$facebook = __( '', 'charitas' );
+			$facebook = __( '', 'charitas-lite' );
 		} 
 		if ( $instance ) {
 			$rss = esc_attr( $instance[ 'rss' ] );
 		}
 		else {
-			$rss = __( '', 'charitas' );
+			$rss = __( '', 'charitas-lite' );
 		} 
 		if ( $instance ) {
 			$googleplus = esc_attr( $instance[ 'googleplus' ] );
 		}
 		else {
-			$googleplus = __( '', 'charitas' );
+			$googleplus = __( '', 'charitas-lite' );
 		} 
 		if ( $instance ) {
 			$youtube = esc_attr( $instance[ 'youtube' ] );
 		}
 		else {
-			$youtube = __( '', 'charitas' );
+			$youtube = __( '', 'charitas-lite' );
 		}
 		
 		if ( $instance ) {
 			$vimeo = esc_attr( $instance[ 'vimeo' ] );
 		}
 		else {
-			$vimeo = __( '', 'charitas' );
+			$vimeo = __( '', 'charitas-lite' );
 		}
 		if ( $instance ) {
 			$soundcloud = esc_attr( $instance[ 'soundcloud' ] );
 		}
 		else {
-			$soundcloud = __( '', 'charitas' );
+			$soundcloud = __( '', 'charitas-lite' );
 		} 
 		if ( $instance ) {
 			$lastfm = esc_attr( $instance[ 'lastfm' ] );
 		}
 		else {
-			$lastfm = __( '', 'charitas' );
+			$lastfm = __( '', 'charitas-lite' );
 		} 
 		if ( $instance ) {
 			$pinterest = esc_attr( $instance[ 'pinterest' ] );
 		}
 		else {
-			$pinterest = __( '', 'charitas' );
+			$pinterest = __( '', 'charitas-lite' );
 		}
 		if ( $instance ) {
 			$flickr = esc_attr( $instance[ 'flickr' ] );
 		}
 		else {
-			$flickr = __( '', 'charitas' );
+			$flickr = __( '', 'charitas-lite' );
 		}
 		if ( $instance ) {
 			$linked = esc_attr( $instance[ 'linked' ] );
 		}
 		else {
-			$linked = __( '', 'charitas' );
+			$linked = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$instagram = esc_attr( $instance[ 'instagram' ] );
 		}
 		else {
-			$instagram = __( '', 'charitas' );
+			$instagram = __( '', 'charitas-lite' );
 		}
 
 		?>
 		<!-- Title-->
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">
-				<?php _e('Title:', 'charitas'); ?>
+				<?php _e('Title:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
@@ -127,132 +127,132 @@ class WPlooksocial extends WP_Widget {
 		<!-- Twitter-->
 		<p>
 			<label for="<?php echo $this->get_field_id('twitter'); ?>">
-				<?php _e('Twitter:', 'charitas'); ?>
+				<?php _e('Twitter:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('twitter'); ?>" name="<?php echo $this->get_field_name('twitter'); ?>" type="text" value="<?php echo $twitter; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Twitter profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Twitter profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- Facebook-->
 		<p>
 			<label for="<?php echo $this->get_field_id('facebook'); ?>">
-				<?php _e('Facebook:', 'charitas'); ?>
+				<?php _e('Facebook:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('facebook'); ?>" name="<?php echo $this->get_field_name('facebook'); ?>" type="text" value="<?php echo $facebook; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Facebook profile, page or group.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Facebook profile, page or group.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- RSS-->
 		<p>
 			<label for="<?php echo $this->get_field_id('rss'); ?>">
-				<?php _e('RSS:', 'charitas'); ?>
+				<?php _e('RSS:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('rss'); ?>" name="<?php echo $this->get_field_name('rss'); ?>" type="text" value="<?php echo $rss; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the Url of your RSS. You may include your RSS from Feedburner.', 'charitas'); ?>
+				<?php _e('Insert the Url of your RSS. You may include your RSS from Feedburner.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- Google Plus-->
 		<p>
 			<label for="<?php echo $this->get_field_id('googleplus'); ?>">
-				<?php _e('Google Plus:', 'charitas'); ?>
+				<?php _e('Google Plus:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('googleplus'); ?>" name="<?php echo $this->get_field_name('googleplus'); ?>" type="text" value="<?php echo $googleplus; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Google Plus profile', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Google Plus profile', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- You Tube-->
 		<p>
 			<label for="<?php echo $this->get_field_id('youtube'); ?>">
-				<?php _e('You Tube:', 'charitas'); ?>
+				<?php _e('You Tube:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('youtube'); ?>" name="<?php echo $this->get_field_name('youtube'); ?>" type="text" value="<?php echo $youtube; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your YouTube profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your YouTube profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- vimeo-->
 		<p>
 			<label for="<?php echo $this->get_field_id('vimeo'); ?>">
-				<?php _e('Vimeo:', 'charitas'); ?>
+				<?php _e('Vimeo:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('vimeo'); ?>" name="<?php echo $this->get_field_name('vimeo'); ?>" type="text" value="<?php echo $vimeo; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your vimeo profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your vimeo profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!-- lastfm-->
 		<p>
 			<label for="<?php echo $this->get_field_id('lastfm'); ?>">
-				<?php _e('Lastfm:', 'charitas'); ?>
+				<?php _e('Lastfm:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('lastfm'); ?>" name="<?php echo $this->get_field_name('lastfm'); ?>" type="text" value="<?php echo $lastfm; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your lastfm profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your lastfm profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 
 		<!-- soundcloud -->
 		<p>
 			<label for="<?php echo $this->get_field_id('soundcloud'); ?>">
-				<?php _e('Soundcloud:', 'charitas'); ?>
+				<?php _e('Soundcloud:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('soundcloud'); ?>" name="<?php echo $this->get_field_name('soundcloud'); ?>" type="text" value="<?php echo $soundcloud; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your soundcloud profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your soundcloud profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!--Pinterest-->
 		<p>
 			<label for="<?php echo $this->get_field_id('pinterest'); ?>">
-				<?php _e('Pinterest:', 'charitas'); ?>
+				<?php _e('Pinterest:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('pinterest'); ?>" name="<?php echo $this->get_field_name('pinterest'); ?>" type="text" value="<?php echo $pinterest; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Pinterest profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Pinterest profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 
 		<!--Flickr-->
 		<p>
 			<label for="<?php echo $this->get_field_id('flickr'); ?>">
-				<?php _e('Flickr:', 'charitas'); ?>
+				<?php _e('Flickr:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('flickr'); ?>" name="<?php echo $this->get_field_name('flickr'); ?>" type="text" value="<?php echo $flickr; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Flickr profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Flickr profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 		
 		<!--Linkedin-->
 		<p>
 			<label for="<?php echo $this->get_field_id('linked'); ?>">
-				<?php _e('Linkedin:', 'charitas'); ?>
+				<?php _e('Linkedin:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('linked'); ?>" name="<?php echo $this->get_field_name('linked'); ?>" type="text" value="<?php echo $linked; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Linkedin profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Linkedin profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 
 		<!--Instagram-->
 		<p>
 			<label for="<?php echo $this->get_field_id('instagram'); ?>">
-				<?php _e('Instagram:', 'charitas'); ?>
+				<?php _e('Instagram:', 'charitas-lite'); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('instagram'); ?>" name="<?php echo $this->get_field_name('instagram'); ?>" type="text" value="<?php echo $instagram; ?>" />
 			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;">
-				<?php _e('Insert the full URL of your Instagram profile.', 'charitas'); ?>
+				<?php _e('Insert the full URL of your Instagram profile.', 'charitas-lite'); ?>
 			</p>
 		</p>
 

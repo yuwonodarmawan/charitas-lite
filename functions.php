@@ -73,7 +73,7 @@ function charitas_setup() {
 		Make theme available for translation
 	-----------------------------------------------------------*/
 
-	load_theme_textdomain( 'charitas', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'charitas-lite', get_template_directory() . '/languages' );
 
 
 	/*-----------------------------------------------------------
@@ -112,8 +112,8 @@ function charitas_setup() {
 	function register_my_menus() {
 		register_nav_menus(
 				array(
-					'primary' => __( 'Main Menu', 'charitas' ),
-					'language' => __( 'Language Menu', 'charitas' ),
+					'primary' => __( 'Main Menu', 'charitas-lite' ),
+					'language' => __( 'Language Menu', 'charitas-lite' ),
 				) 
 		);
 	}

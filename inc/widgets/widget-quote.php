@@ -20,7 +20,7 @@ class wplook_quote_widget extends WP_Widget {
 		parent::__construct(
 	 		'wplook_quote_widget',
 			'WPlook Quote',
-			array( 'description' => __( 'A widget for displaying Quotes', 'charitas' ), )
+			array( 'description' => __( 'A widget for displaying Quotes', 'charitas-lite' ), )
 		);
 	}
 
@@ -35,25 +35,25 @@ class wplook_quote_widget extends WP_Widget {
 			$title = esc_attr( $instance[ 'title' ] );
 		}
 		else {
-			$title = __( '', 'charitas' );
+			$title = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$quote = esc_attr( $instance[ 'quote' ] );
 		}
 		else {
-			$quote = __( '', 'charitas' );
+			$quote = __( '', 'charitas-lite' );
 		}
 
 		?>
 			<p>
-				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</p>
 			
 			<p>
 				<label for="<?php echo $this->get_field_id('quote'); ?>">
-					<?php _e('Quote:', 'charitas'); ?>
+					<?php _e('Quote:', 'charitas-lite'); ?>
 				</label>
 				<textarea cols="25" rows="10" class="widefat" id="<?php echo $this->get_field_id('quote'); ?>" name="<?php echo $this->get_field_name('quote'); ?>" type="text"><?php echo $quote; ?></textarea>
 			</p>

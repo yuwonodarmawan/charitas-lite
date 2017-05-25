@@ -92,7 +92,7 @@
 						<?php } ?>
 
 						<?php if ( ot_get_option('charitas_donete_link') != "") { ?>
-							<li class="donate"><a href="<?php echo esc_url(ot_get_option('charitas_donete_link') ) ?>"><?php _e('Donate', 'charitas'); ?> <i class="icon-heart"></i></a></li>
+							<li class="donate"><a href="<?php echo esc_url(get_theme_mod('wplook_donateurl') ); ?>"><?php _e('Donate', 'charitas-lite'); ?> <i class="icon-heart"></i></a></li>
 						<?php } ?>
 
 					</ul>

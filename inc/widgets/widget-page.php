@@ -20,7 +20,7 @@ class wplook_page_widget extends WP_Widget {
 		parent::__construct(
 	 		'wplook_page_widget',
 			'WPlook Page (Home Page)',
-			array( 'description' => __( 'A widget to displaying a page content', 'charitas' ), )
+			array( 'description' => __( 'A widget to displaying a page content', 'charitas-lite' ), )
 		);
 	}
 
@@ -35,7 +35,7 @@ class wplook_page_widget extends WP_Widget {
 			$title = esc_attr( $instance[ 'title' ] );
 		}
 		else {
-			$title = __( '', 'charitas' );
+			$title = __( '', 'charitas-lite' );
 		}
 
 		if( isset( $instance['page_id'] ) ) {
@@ -44,12 +44,12 @@ class wplook_page_widget extends WP_Widget {
 		    $page_id = 0;
 		} ?>
 			<p>
-				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</p>
 
 			<p>
-				<label for="<?php echo $this->get_field_id('pages'); ?>"> <?php _e('Page:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('pages'); ?>"> <?php _e('Page:', 'charitas-lite'); ?> </label>
 				
 				<?php
 				$args = array(
@@ -61,7 +61,7 @@ class wplook_page_widget extends WP_Widget {
 				?>
 			</p>
 			<br />
-			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('The ID of this widget is: <strong>pagecontent</strong>', 'charitas'); ?></p>
+			<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('The ID of this widget is: <strong>pagecontent</strong>', 'charitas-lite'); ?></p>
 			<br />
 		<?php 
 	}

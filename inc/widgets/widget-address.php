@@ -20,7 +20,7 @@ class wplook_address_widget extends WP_Widget {
 		parent::__construct(
 	 		'wplook_address_widget',
 			'WPlook Address',
-			array( 'description' => __( 'A widget for displaying Address', 'charitas' ), )
+			array( 'description' => __( 'A widget for displaying Address', 'charitas-lite' ), )
 		);
 	}
 
@@ -34,21 +34,21 @@ class wplook_address_widget extends WP_Widget {
 			$title = esc_attr( $instance[ 'title' ] );
 		}
 		else {
-			$title = __( 'Contact Us', 'charitas' );
+			$title = __( 'Contact Us', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$organisation_name = esc_attr( $instance[ 'organisation_name' ] );
 		}
 		else {
-			$organisation_name = __( '', 'charitas' );
+			$organisation_name = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$street_address = esc_attr( $instance[ 'street_address' ] );
 		}
 		else {
-			$street_address = __( '', 'charitas' );
+			$street_address = __( '', 'charitas-lite' );
 		}
 
 		
@@ -61,38 +61,38 @@ class wplook_address_widget extends WP_Widget {
 			$phone = esc_attr( $instance[ 'phone' ] );
 		}
 		else {
-			$phone = __( '', 'charitas' );
+			$phone = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$email = esc_attr( $instance[ 'email' ] );
 		}
 		else {
-			$email = __( '', 'charitas' );
+			$email = __( '', 'charitas-lite' );
 		}
 
 		if ( $instance ) {
 			$website = esc_attr( $instance[ 'website' ] );
 		}
 		else {
-			$website = __( '', 'charitas' );
+			$website = __( '', 'charitas-lite' );
 		}
 
 		?>
 			<p>
-				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e('Title:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</p>
 			
 			<p>
-				<label for="<?php echo $this->get_field_id('organisation_name'); ?>"> <?php _e('Organisation Name:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('organisation_name'); ?>"> <?php _e('Organisation Name:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('organisation_name'); ?>" name="<?php echo $this->get_field_name('organisation_name'); ?>" type="text" value="<?php echo $organisation_name; ?>" />
-				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Organisation name', 'charitas'); ?></p>
+				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Organisation name', 'charitas-lite'); ?></p>
 			</p>
 
 			<p>
 				<label for="<?php echo $this->get_field_id('street_address'); ?>">
-					<?php _e('Street Address:', 'charitas'); ?>
+					<?php _e('Street Address:', 'charitas-lite'); ?>
 				</label>
 				<textarea cols="25" rows="10" class="widefat" id="<?php echo $this->get_field_id('street_address'); ?>" name="<?php echo $this->get_field_name('street_address'); ?>" type="text"><?php echo $street_address; ?></textarea>
 			</p>
@@ -103,21 +103,21 @@ class wplook_address_widget extends WP_Widget {
 			
 
 			<p>
-				<label for="<?php echo $this->get_field_id('phone'); ?>"> <?php _e('Phone:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('phone'); ?>"> <?php _e('Phone:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('phone'); ?>" name="<?php echo $this->get_field_name('phone'); ?>" type="text" value="<?php echo $phone; ?>" />
-				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Phone Number', 'charitas'); ?></p>
+				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Phone Number', 'charitas-lite'); ?></p>
 			</p>
 
 			<p>
-				<label for="<?php echo $this->get_field_id('email'); ?>"> <?php _e('Email:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('email'); ?>"> <?php _e('Email:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('email'); ?>" name="<?php echo $this->get_field_name('email'); ?>" type="text" value="<?php echo $email; ?>" />
-				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Email Address', 'charitas'); ?></p>
+				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Email Address', 'charitas-lite'); ?></p>
 			</p>
 
 			<p>
-				<label for="<?php echo $this->get_field_id('website'); ?>"> <?php _e('Website:', 'charitas'); ?> </label>
+				<label for="<?php echo $this->get_field_id('website'); ?>"> <?php _e('Website:', 'charitas-lite'); ?> </label>
 				<input class="widefat" id="<?php echo $this->get_field_id('website'); ?>" name="<?php echo $this->get_field_name('website'); ?>" type="text" value="<?php echo $website; ?>" />
-				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Website Address', 'charitas'); ?></p>
+				<p style="font-size: 10px; color: #999; margin: -10px 0 0 0px; padding: 0px;"> <?php _e('Add Website Address', 'charitas-lite'); ?></p>
 			</p>
 
 
@@ -175,15 +175,15 @@ class wplook_address_widget extends WP_Widget {
 					<?php } ?>
 				</p>
 				<?php if ( $phone ){ ?>
-					<b><?php _e('Phone:', 'charitas'); ?></b><span class="tel"> <?php echo $phone; ?></span><br />
+					<b><?php _e('Phone:', 'charitas-lite'); ?></b><span class="tel"> <?php echo $phone; ?></span><br />
 				<?php } ?>
 
 				<?php if ( $email ){ ?>
-					<b><?php _e('E-mail:', 'charitas'); ?></b><span class="email"> <?php echo $email; ?></span><br />
+					<b><?php _e('E-mail:', 'charitas-lite'); ?></b><span class="email"> <?php echo $email; ?></span><br />
 				<?php } ?>
 
 				<?php if ( $website ){ ?>	
-					<b><?php _e('Website:', 'charitas'); ?></b><span class="url"> <?php echo $website ?></span><br />
+					<b><?php _e('Website:', 'charitas-lite'); ?></b><span class="url"> <?php echo $website ?></span><br />
 				<?php } ?>
 			</address>
 		<?php echo $after_widget; 

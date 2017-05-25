@@ -34,7 +34,7 @@
 		<div id="primary" class="grid_11 suffix_1">
 			<?php if ( is_home() ) { ?>
 				<div class="widget-title">
-					<h3><?php _e('Latest posts', 'charitas'); ?></h3>
+					<h3><?php _e('Latest posts', 'charitas-lite'); ?></h3>
 					<div class="clear"></div>
 				</div>
 			<?php } ?>

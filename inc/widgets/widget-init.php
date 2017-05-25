@@ -25,9 +25,9 @@ function wplook_widgets_init() {
 	-----------------------------------------------------------*/
 	
 	register_sidebar( array(
-		'name' => __( 'First Home Page Widget area', 'charitas' ),
+		'name' => __( 'First Home Page Widget area', 'charitas-lite' ),
 		'id' => 'front-1',
-		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas' ),
+		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -35,9 +35,9 @@ function wplook_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Second Home Page Widget area', 'charitas' ),
+		'name' => __( 'Second Home Page Widget area', 'charitas-lite' ),
 		'id' => 'front-2',
-		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas' ),
+		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -45,9 +45,9 @@ function wplook_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Third Home Page Widget area', 'charitas' ),
+		'name' => __( 'Third Home Page Widget area', 'charitas-lite' ),
 		'id' => 'front-3',
-		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas' ),
+		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -55,9 +55,9 @@ function wplook_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Fourth Home Page Widget area', 'charitas' ),
+		'name' => __( 'Fourth Home Page Widget area', 'charitas-lite' ),
 		'id' => 'front-4',
-		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas' ),
+		'description' => __('Widgets in this area will be shown only on the Home Page Template.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -70,9 +70,9 @@ function wplook_widgets_init() {
 	-----------------------------------------------------------*/
 	
 	register_sidebar( array(
-		'name' => __( 'Page Widget area', 'charitas' ),
+		'name' => __( 'Page Widget area', 'charitas-lite' ),
 		'id' => 'page-1',
-		'description' => __('Widgets in this area will be shown on all Pages.','charitas' ),
+		'description' => __('Widgets in this area will be shown on all Pages.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -85,9 +85,9 @@ function wplook_widgets_init() {
 	-----------------------------------------------------------*/
 	
 	register_sidebar( array(
-		'name' => __( 'Press/Blog Widget area', 'charitas' ),
+		'name' => __( 'Press/Blog Widget area', 'charitas-lite' ),
 		'id' => 'post-1',
-		'description' => __('Widgets in this area will be shown on all Posts.','charitas' ),
+		'description' => __('Widgets in this area will be shown on all Posts.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -100,9 +100,9 @@ function wplook_widgets_init() {
 	-----------------------------------------------------------*/
 	
 	register_sidebar( array(
-		'name' => __( 'Contact Page Widget area', 'charitas' ),
+		'name' => __( 'Contact Page Widget area', 'charitas-lite' ),
 		'id' => 'contact-1',
-		'description' => __('Widgets in this area will be shown on Contact Pages.','charitas' ),
+		'description' => __('Widgets in this area will be shown on Contact Pages.','charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<div class="widget-title"><h3>',
@@ -115,9 +115,9 @@ function wplook_widgets_init() {
 	-----------------------------------------------------------*/
 
 	register_sidebar( array(
-		'name' => __( 'First Footer Widget Area', 'charitas' ),
+		'name' => __( 'First Footer Widget Area', 'charitas-lite' ),
 		'id' => 'f1-widgets',
-		'description' => __( 'The first footer widget area', 'charitas' ),
+		'description' => __( 'The first footer widget area', 'charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3>',
@@ -126,9 +126,9 @@ function wplook_widgets_init() {
 
 
 	register_sidebar( array(
-		'name' => __( 'Second Footer Widget Area', 'charitas' ),
+		'name' => __( 'Second Footer Widget Area', 'charitas-lite' ),
 		'id' => 'f2-widgets',
-		'description' => __( 'The second footer widget area', 'charitas' ),
+		'description' => __( 'The second footer widget area', 'charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3>',
@@ -137,9 +137,9 @@ function wplook_widgets_init() {
 
 
 	register_sidebar( array(
-		'name' => __( 'Third Footer Widget Area', 'charitas' ),
+		'name' => __( 'Third Footer Widget Area', 'charitas-lite' ),
 		'id' => 'f3-widgets',
-		'description' => __( 'The Third footer widget area', 'charitas' ),
+		'description' => __( 'The Third footer widget area', 'charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3>',
@@ -147,9 +147,9 @@ function wplook_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Fourth Footer Widget Area', 'charitas' ),
+		'name' => __( 'Fourth Footer Widget Area', 'charitas-lite' ),
 		'id' => 'f4-widgets',
-		'description' => __( 'The Forth footer widget area', 'charitas' ),
+		'description' => __( 'The Forth footer widget area', 'charitas-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3>',

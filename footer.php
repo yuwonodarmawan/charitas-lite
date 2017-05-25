@@ -66,7 +66,7 @@
 					
 					<!-- Design By -->
 					<div class="grid_8">
-						<p class="designby"><?php _e('Designed by', 'charitas'); ?> <a href="https://wplook.com/" title="<?php _e('WPlook Studio', 'charitas'); ?>" target="_blank">WPlook Studio</a></p>
+						<p class="designby"><?php _e('Designed by', 'charitas-lite'); ?> <a href="https://wplook.com/" title="<?php _e('WPlook Studio', 'charitas-lite'); ?>" target="_blank">WPlook Studio</a></p>
 					</div>
 
 					<div class="clear"></div>

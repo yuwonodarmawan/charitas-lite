@@ -16,7 +16,7 @@
 	
 <?php endwhile; wp_reset_postdata(); ?>
 <?php else : ?>
-	<p><?php _e('Sorry, no posts matched your criteria.', 'charitas'); ?></p>
+	<p><?php _e('Sorry, no posts matched your criteria.', 'charitas-lite'); ?></p>
 <?php endif; ?>
 
 <?php charitas_content_navigation('postnav' ) ?>

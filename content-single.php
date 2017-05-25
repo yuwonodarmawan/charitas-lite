@@ -25,7 +25,7 @@
 
 				<div class="long-description">
 					<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas' ) . '</span>', 'after' => '</div>' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas-lite' ) . '</span>', 'after' => '</div>' ) ); ?>
 				</div>
 
 				

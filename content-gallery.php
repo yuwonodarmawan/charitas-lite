@@ -19,7 +19,7 @@
 
 				<div class="long-description">
 					<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas' ) . '</span>', 'after' => '</div>' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas-lite' ) . '</span>', 'after' => '</div>' ) ); ?>
 				</div>
 
 				
@@ -86,13 +86,13 @@
 
 			<div class="short-description">
 				<?php if(strpos(get_the_content(),'#more-')) {
-					the_content( sprintf( __( 'Continue reading %s', 'charitas' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ) );
+					the_content( sprintf( __( 'Continue reading %s', 'charitas-lite' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ) );
 				} else {
 					echo "<p>";
 					echo charitas_short_excerpt('40');
 					echo "</p>";
 				} ?>
-				<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas' ) . '</span>', 'after' => '</div>' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'charitas-lite' ) . '</span>', 'after' => '</div>' ) ); ?>
 			</div>
 			
 			<div class="entry-meta">
@@ -108,7 +108,7 @@
 					<a class="buttons author fleft" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><i class="icon-user"></i> <?php echo get_the_author(); ?></a> 
 				<?php } ?>
 				
-				<a class="buttons fright" href="<?php the_permalink(); ?>" title="<?php _e('read more', 'charitas'); ?>"><?php _e('read more', 'charitas'); ?></a>
+				<a class="buttons fright" href="<?php the_permalink(); ?>" title="<?php _e('read more', 'charitas-lite'); ?>"><?php _e('read more', 'charitas-lite'); ?></a>
 			</div>
 			<div class="clear"></div>
 
